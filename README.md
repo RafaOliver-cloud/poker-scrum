@@ -193,6 +193,13 @@ npm run dev
 # A aplicação estará disponível em: http://localhost:5173
 ```
 
+Observações sobre variáveis de ambiente:
+
+- O arquivo [env.txt](env.txt) é apenas um template versionado. Não mantenha valores reais nele.
+- Em produção, configure as variáveis no provedor de hospedagem, como Netlify ou Vercel.
+- Variáveis com prefixo `VITE_` são embutidas no frontend no build. Use esse prefixo apenas para valores públicos, como `VITE_SUPABASE_URL` e `VITE_SUPABASE_PUBLISHABLE_KEY`.
+- Nunca exponha chaves sensíveis, como `service_role`, no frontend ou em variáveis com prefixo `VITE_`.
+
 ### Build para Produção
 
 ```bash
